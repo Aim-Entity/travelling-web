@@ -1,0 +1,581 @@
+{% extends 'base.htm' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block head %}
+    <title>Service</title>
+
+    <style>
+      body {
+        height: 4320px;
+      }
+
+      .s1-cover {
+        position: absolute;
+        width: 1280px;
+        height: 1080px;
+        left: 0px;
+        top: 0px;
+      }
+
+      .title {
+        position: absolute;
+        width: 1273px;
+        height: 47px;
+        left: -5px;
+        top: 631px;
+
+        font-family: raleway;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        line-height: 96px;
+
+        text-align: center;
+
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .s2-container {
+        position: absolute;
+        width: 1200px;
+        height: 1000px;
+        left: 37px;
+        top: 1115px;
+
+        background: #1c1c1c;
+      }
+
+      .location-1,
+      .location-2,
+      .location-3 {
+        font-family: poppins;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        width: 320px;
+        height: 640px;
+        background-color: white;
+      }
+
+      .l1-img,
+      .l2-img,
+      .l3-img {
+        width: 320px;
+        height: 320px;
+      }
+
+      .location-1 {
+        position: absolute;
+        left: 77px;
+        top: 94px;
+      }
+
+      .location-2 {
+        position: absolute;
+        left: 437px;
+        top: 94px;
+      }
+
+      .location-3 {
+        position: absolute;
+        left: 797px;
+        top: 94px;
+      }
+
+      .l1-location,
+      .l2-location,
+      .l3-location {
+        margin: 30px 0px 0px 20px;
+
+        width: 58px;
+        height: 24px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+
+        color: #000000;
+      }
+
+      .l1-star-text,
+      .l2-star-text,
+      .l3-star-text {
+        margin: 0px 0px 70px 20px;
+
+        width: 45px;
+        height: 29px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 19px;
+
+        color: #000000;
+      }
+
+      .l1-price,
+      .l2-price,
+      .l3-price {
+        margin: 0px 0px 0px 20px;
+
+        width: 100px;
+        height: 40px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+
+        color: #000000;
+      }
+
+      .l1-visit,
+      .l2-visit,
+      .l3-visit {
+        position: relative;
+        width: 120px;
+        height: 40px;
+        left: 175px;
+        bottom: 50px;
+        background: #ffffff;
+        border: 2px solid #5496f9;
+        box-sizing: border-box;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .l1-stars,
+      .l2-stars,
+      .l3-stars {
+        margin: 0px 0px 0px 20px;
+      }
+
+      .arrow {
+        position: relative;
+        z-index: 2;
+        top: 8px;
+      }
+
+      .number,
+      .first,
+      .last {
+        color: white;
+      }
+
+      .arrow,
+      .number,
+      .first,
+      .last {
+        display: inline-block;
+        padding-left: 20px;
+      }
+
+      .pagination {
+        position: absolute;
+        width: 465px;
+        height: 30px;
+        left: 77px;
+        top: 940px;
+      }
+
+      .s3-container {
+        position: absolute;
+        width: 1200px;
+        height: 1000px;
+        left: 40px;
+        top: 2200px;
+
+        background: #494949;
+      }
+
+      .package-1,
+      .package-2,
+      .package-3 {
+        font-family: poppins;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        width: 320px;
+        height: 640px;
+        background-color: white;
+      }
+
+      .p1-img,
+      .p2-img,
+      .p3-img {
+        width: 320px;
+        height: 320px;
+      }
+
+      .package-1 {
+        position: absolute;
+        left: 77px;
+        top: 94px;
+      }
+
+      .package-2 {
+        position: absolute;
+        left: 437px;
+        top: 94px;
+      }
+
+      .package-3 {
+        position: absolute;
+        left: 797px;
+        top: 94px;
+      }
+
+      .p1-size,
+      .p2-size,
+      .p3-size {
+        margin: 0px 0px 0px 20px;
+
+        width: 58px;
+        height: 24px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+
+        color: #000000;
+      }
+
+      .p2-size {
+        position: relative;
+        bottom: -60px;
+      }
+
+      .p1-size {
+        position: relative;
+        bottom: -60px;
+      }
+
+      .p1-img {
+        width: 80px;
+        height: 80px;
+        justify-self: center;
+        align-self: center;
+      }
+
+      .p2-img {
+        width: 160px;
+        height: 160px;
+        justify-self: center;
+        align-self: center;
+      }
+
+      .p3-img {
+        width: 320px;
+        height: 320px;
+      }
+
+      .p1-batch,
+      .p2-batch,
+      .p3-batch {
+        position: relative;
+        left: 20px;
+        bottom: 125px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+
+        color: #000000;
+      }
+
+      .p1-weight,
+      .p2-weight,
+      .p3-weight {
+        position: relative;
+        left: 20px;
+        bottom: 115px;
+        font-family: Poppins;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 27px;
+
+        color: #000000;
+      }
+
+      .p1-price,
+      .p2-price,
+      .p3-price {
+        position: relative;
+        left: 20px;
+        bottom: 75px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+
+        color: #000000;
+      }
+
+      .p1-visit,
+      .p2-visit,
+      .p3-visit {
+        position: relative;
+        left: 20px;
+        bottom: 50px;
+
+        width: 120px;
+        height: 40px;
+        background: #ffffff;
+        border: 2px solid #5496f9;
+        box-sizing: border-box;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .batch {
+        position: absolute;
+        width: 465px;
+        height: 30px;
+        left: 77px;
+        top: 940px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 27px;
+
+        align-items: center;
+
+        color: #ffffff;
+      }
+    </style>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <div class="container">
+      <div class="first-section">
+        <img
+          src="{% static 'imgs/service_cover.jpg' %}"
+          alt="S1-Cover"
+          class="s1-cover"
+        />
+
+        <h1 class="title">
+          We Have A Wide Range Of Services
+        </h1>
+      </div>
+
+      <div class="second-section">
+        <div class="s2-container">
+          <div class="location-1">
+            <img
+              src="{% static 'imgs/service_paris.jpg' %}"
+              alt="Paris"
+              class="l1-img"
+            />
+            <h2 class="l1-location">Paris</h2>
+
+            <div class="l1-stars">
+              <img
+                src="{% static 'imgs/open_star.svg' %}"
+                alt="Star"
+                class="l1-s1 star"
+              />
+              <img
+                src="{% static 'imgs/open_star.svg' %}"
+                alt="Star"
+                class="l1-s2 star"
+              />
+              <img
+                src="{% static 'imgs/open_star.svg' %}"
+                alt="Star"
+                class="l1-s3 star"
+              />
+              <img
+                src="{% static 'imgs/open_star.svg' %}"
+                alt="Star"
+                class="l1-s4 star"
+              />
+              <img
+                src="{% static 'imgs/close_star.svg' %}"
+                alt="Star"
+                class="l1-s5 star"
+              />
+            </div>
+
+            <p class="l1-star-text">4 Stars</p>
+            <h2 class="l1-price">From £499</h2>
+
+            <a href=""><button class="l1-visit">Visit</button></a>
+          </div>
+
+          <div class="location-2">
+            <img
+              src="{% static 'imgs/service_paris.jpg' %}"
+              alt="Paris"
+              class="l2-img"
+            />
+            <h2 class="l2-location">Paris</h2>
+
+            <div class="l2-stars">
+              <img
+                src="{% static 'imgs/open_star.svg' %}"
+                alt="Star"
+                class="l2-s1 star"
+              />
+              <img
+                src="{% static 'imgs/open_star.svg' %}"
+                alt="Star"
+                class="l2-s2 star"
+              />
+              <img
+                src="{% static 'imgs/open_star.svg' %}"
+                alt="Star"
+                class="l2-s3 star"
+              />
+              <img
+                src="{% static 'imgs/open_star.svg' %}"
+                alt="Star"
+                class="l2-s4 star"
+              />
+              <img
+                src="{% static 'imgs/close_star.svg' %}"
+                alt="Star"
+                class="l2-s5 star"
+              />
+            </div>
+
+            <p class="l2-star-text">4 Stars</p>
+            <h2 class="l2-price">From £499</h2>
+
+            <a href=""><button class="l2-visit">Visit</button></a>
+          </div>
+
+          <div class="location-3">
+            <img
+              src="{% static 'imgs/service_paris.jpg' %}"
+              alt="Paris"
+              class="l3-img"
+            />
+            <h2 class="l3-location">Paris</h2>
+
+            <div class="l3-stars">
+              <img
+                src="{% static 'imgs/open_star.svg' %}"
+                alt="Star"
+                class="l3-s1 star"
+              />
+              <img
+                src="{% static 'imgs/open_star.svg' %}"
+                alt="Star"
+                class="l3-s2 star"
+              />
+              <img
+                src="{% static 'imgs/open_star.svg' %}"
+                alt="Star"
+                class="l3-s3 star"
+              />
+              <img
+                src="{% static 'imgs/open_star.svg' %}"
+                alt="Star"
+                class="l3-s4 star"
+              />
+              <img
+                src="{% static 'imgs/close_star.svg' %}"
+                alt="Star"
+                class="l3-s5 star"
+              />
+            </div>
+
+            <p class="l3-star-text">4 Stars</p>
+            <h2 class="l3-price">From £499</h2>
+
+            <a href=""><button class="l3-visit">Visit</button></a>
+          </div>
+          <div class="pagination">
+            <img
+              src="{% static 'imgs/left_arrow.svg' %}"
+              alt="Arrow"
+              class="left-arrow arrow"
+            />
+
+            <p class="first">First</p>
+            <p class="one number">1</p>
+            <p class="two number">2</p>
+            <p class="three number">3</p>
+            <p class="last">Last</p>
+
+            <img
+              src="{% static 'imgs/right_arrow.svg' %}"
+              alt="Arrow"
+              class="left-arrow arrow"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="third-section">
+        <div class="s3-container">
+          <div class="package-1">
+            <img
+              src="{% static 'imgs/ship_cargo.svg' %}"
+              alt="Small"
+              class="p1-img"
+            />
+            <h2 class="p1-size">Small</h2>
+
+            <h2 class="p1-batch">20 - 250 Batches</h2>
+            <h3 class="p1-weight">Max. 750 KG</h3>
+
+            <h2 class="p1-price">From £89.99 Per Day</h2>
+
+            <a href=""><button class="p1-visit">Purchase</button></a>
+          </div>
+
+          <div class="package-2">
+            <img
+              src="{% static 'imgs/ship_cargo.svg' %}"
+              alt="Medium"
+              class="p2-img"
+            />
+            <h2 class="p2-size">Medium</h2>
+            <h2 class="p2-batch">251 - 500 Batches</h2>
+            <h3 class="p2-weight">Max. 2000 KG</h3>
+
+            <h2 class="p2-price">From £179.99 Per Day</h2>
+
+            <a href=""><button class="p2-visit">Purchase</button></a>
+          </div>
+
+          <div class="package-3">
+            <img
+              src="{% static 'imgs/ship_cargo.svg' %}"
+              alt="Large"
+              class="p3-img"
+            />
+            <h2 class="p3-size">Large</h2>
+            <h2 class="p3-batch">501 - 1500 Batches</h2>
+            <h3 class="p3-weight">Max. 5000 KG</h3>
+
+            <h2 class="p3-price">From £329.99 Per Day</h2>
+
+            <a href=""><button class="p3-visit">Purchase</button></a>
+          </div>
+          <div class="batch">
+            <h2>* 1 Batch = 16 Items</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>

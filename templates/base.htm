@@ -1,0 +1,372 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    {% block head %}
+    <title>Change Me</title>
+    {% endblock %}
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      a {
+        text-decoration: none;
+      }
+      body {
+        font-family: Poppins;
+        position: relative;
+        width: 100%;
+
+        overflow-x: hidden;
+      }
+
+      .company-name {
+        position: absolute;
+        width: 211px;
+        height: 52px;
+        left: 77px;
+        top: 53px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+
+        color: #ffffff;
+      }
+
+      .home {
+        position: absolute;
+        width: 78px;
+        height: 38px;
+        left: 436px;
+        top: 60px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+
+        color: #ffffff;
+      }
+
+      .about {
+        position: absolute;
+        width: 110px;
+        height: 38px;
+        left: 601px;
+        top: 60px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+
+        color: #ffffff;
+      }
+
+      .services {
+        position: absolute;
+        width: 100px;
+        height: 38px;
+        left: 779px;
+        top: 60px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+
+        color: #ffffff;
+      }
+
+      .contact {
+        position: absolute;
+        width: 99px;
+        height: 38px;
+        left: 954px;
+        top: 60px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+
+        color: #ffffff;
+      }
+
+      .call-us {
+        position: absolute;
+        width: 250px;
+        height: 38px;
+        left: 1088px;
+        top: 60px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+
+        color: #ffffff;
+
+        color: #ffffff;
+      }
+
+      .base-nav {
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        left: 0px;
+        top: 0px;
+        z-index: 10;
+
+        background: rgba(0, 0, 0, 0.15);
+      }
+
+      .h1 {
+        position: absolute;
+        width: 10px;
+        height: 0px;
+        left: 352px;
+        top: 19px;
+
+        border: 0.5px solid #ffffff;
+      }
+
+      .h2 {
+        position: absolute;
+        width: 10px;
+        height: 0px;
+        left: 352px;
+        top: 24px;
+
+        border: 0.5px solid #ffffff;
+      }
+
+      .h3 {
+        position: absolute;
+        width: 10px;
+        height: 0px;
+        left: 352px;
+        top: 29px;
+
+        border: 0.5px solid #ffffff;
+      }
+
+      .base-ul {
+        list-style-type: none;
+      }
+
+      .hamburger {
+        display: none;
+      }
+
+      .base-top {
+        position: absolute;
+        width: 141px;
+        height: 79px;
+        left: 570px;
+        top: 252px;
+
+        background: #ffffff;
+        border-radius: 40px 40px 0px 0px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+      }
+
+      .base-bottom {
+        position: absolute;
+        width: 594px;
+        height: 100px;
+        left: 344px;
+        top: 316px;
+
+        background: #ffffff;
+      }
+
+      .base-city {
+        position: absolute;
+        width: 357px;
+        height: 30px;
+        top: 35px;
+        left: 10px;
+        border-radius: 5px;
+        font-size: 20px;
+
+        background: #e0e0e0;
+        border: none;
+      }
+
+      .base-city::placeholder {
+        position: relative;
+        left: 15px;
+      }
+
+      .search {
+        position: relative;
+        z-index: 2;
+      }
+
+      .search-btn {
+        position: absolute;
+        width: 118px;
+        height: 39px;
+        top: 30px;
+        left: 400px;
+        cursor: pointer;
+
+        background: #000000;
+        border-radius: 20px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        display: grid;
+        align-items: center;
+        color: #fff;
+        border: none;
+      }
+
+      .base-top-text {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 27px;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .darkener {
+        position: absolute;
+        z-index: -2;
+        width: 100%;
+        height: 293px;
+        left: 0px;
+        top: 0px;
+        z-index: 10;
+
+        background: rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="base-container">
+      <div class="darkener"></div>
+      <div class="base-nav">
+        <h1 class="company-name">Company Name</h1>
+        <ul class="base-ul">
+          <li class="base-li">
+            <a href="{% url 'home' %}" class="base-a home">Home</a>
+          </li>
+          <li class="base-li">
+            <a href="{% url 'about' %}" class="base-a about">About Us</a>
+          </li>
+          <li class="base-li">
+            <a href="{% url 'service' %}" class="base-a services">Services</a>
+          </li>
+          <li class="base-li">
+            <a href="{% url 'contact' %}" class="base-a contact">Contact</a>
+          </li>
+        </ul>
+        <h2 class="call-us">Call Us: 111-111-111-111</h2>
+      </div>
+
+      <div class="search">
+        <div class="base-top">
+          <h3 class="base-top-text">Search For Your Trip</h3>
+        </div>
+
+        <div class="base-bottom">
+          <form>
+            <!-- {{ city }} -->
+            <input type="text" placeholder="City" class="base-city" />
+            <button class="search-btn">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"
+      integrity="sha256-kRbW+SRRXPogeps8ZQcw2PooWEDPIjVQmN1ocWVQHRY="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let home = document.querySelector(".home");
+      let about = document.querySelector(".about");
+      let services = document.querySelector(".services");
+      let contact = document.querySelector(".contact");
+      let nav = document.querySelectorAll(".base-a");
+      let whole_nav = document.querySelector(".base-nav");
+
+      for (let i = 0; i < nav.length; i++) {
+        let others = [];
+
+        nav[i].addEventListener("mouseenter", e => {
+          for (let j = 0; j < nav.length; j++) {
+            if (nav[j] != e.target) {
+              others.push(nav[j]);
+            }
+          }
+          anime
+            .timeline({
+              easing: "easeOutExpo"
+            })
+
+            .add({
+              targets: others,
+              translateY: ["0%", "70%"],
+              duration: 1500
+            });
+        });
+
+        nav[i].addEventListener("mouseout", e => {
+          anime
+            .timeline({
+              easing: "easeOutExpo"
+            })
+            .add({
+              targets: others,
+              translateY: ["70%", "0%"],
+              duration: 1500
+            });
+        });
+      }
+    </script>
+
+    {% block content %}
+    <h1>ADD A CONTENT BLOCK</h1>
+    {% endblock %}
+  </body>
+</html>

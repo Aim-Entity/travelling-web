@@ -1,0 +1,1313 @@
+{% extends 'base.htm' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block head %}
+    <title>| Home</title>
+
+    <style>
+      
+        body{
+          height: 6144px;
+        }
+        
+        .extra-text {
+          display: block;
+          font-weight: normal;
+          width: 180px;
+        }
+
+        .title {
+          position: absolute;
+          width: 814px;
+          height: 47px;
+          left: 218px;
+          top: 639px;
+          
+          font-family: raleway;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 72px;
+          line-height: 108px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          
+          color: rgba(255, 255, 255, 0.8);
+          
+        }
+
+        .s1_cover {
+          position: absolute;
+          width: 1280px;
+          height: 1024px;
+          left: 0px;
+          top: 0px;
+
+          z-index: -2;
+        }
+
+        .plane {
+          position: absolute;
+          width: 258px;
+          height: 338px;
+          left: 03px;
+          top: 920px;
+          display: block;
+        }
+
+        .bush {
+          position: absolute;
+          width: 594px;
+          height: 1280px;
+          left: 1000px;
+          top: 759.74px;
+
+          transform: rotate(-15deg);
+          display: block;
+        }
+
+        .beach {
+          position: absolute;
+          width: 90px;
+          height: 90px;
+          left: 94px;
+          top: 1300px;
+        }
+
+        .wallet {
+          position: absolute;
+          width: 90px;
+          height: 90px;
+          left: 505px;
+          top: 1310px;
+        }
+
+        .case {
+          position: absolute;
+          width: 90px;
+          height: 90px;
+          left: 916px;
+          top: 1308px;
+        }
+
+        .beach-text {
+          position: absolute;
+          width: 121px;
+          height: 131px;
+          left: 248px;
+          top: 1332px;
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+
+        .wallet-text {
+          position: absolute;
+          width: 97px;
+          height: 131px;
+          left: 624px;
+          top: 1333px;
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        .case-text {
+          position: absolute;
+          width: 168px;
+          height: 131px;
+          left: 1030px;
+          top: 1334px;
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        .upper-hr {
+          position: absolute;
+          width: 1000px;
+          height: 0px;
+          left: 140px;
+          top: 1506px;
+
+          border: 2px solid rgba(152, 148, 148, 0.3);
+        }
+
+        .offer {
+          position: absolute;
+          width: 108px;
+          height: 47px;
+          left: 1132px;
+          top: 300px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 36px;
+          display: flex;
+          align-items: center;
+
+          color: rgba(243, 243, 243, 0.55);
+        }
+
+        .testi {
+          position: absolute;
+          width: 190px;
+          height: 47px;
+          left: 1076px;
+          top: 383px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 36px;
+          display: flex;
+          align-items: center;
+
+          color: rgba(243, 243, 243, 0.55);
+        }
+
+        .latest {
+          position: absolute;
+          width: 112px;
+          height: 47px;
+          left: 1128px;
+          top: 465px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 36px;
+          display: flex;
+          align-items: center;
+
+          color: rgba(243, 243, 243, 0.55);
+        }
+
+        .lower-hr {
+          position: absolute;
+          width: 164px;
+          height: 0px;
+          left: 105px;
+          top: 467px;
+
+          border: 2px solid #ffffff;
+          display: none;
+        }
+
+        .s2-slogan {
+          position: absolute;
+          width: 191px;
+          height: 26px;
+          left: 544px;
+          top: 1594px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 36px;
+
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        .location-header {
+          position: absolute;
+          width: 502px;
+          height: 67px;
+          left: 389px;
+          top: 1663px;
+
+          font-family: raleway;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 48px;
+          line-height: 72px;
+
+          color: #000000;
+        }
+
+        .sal-img {
+          position: absolute;
+          width: 304.72px;
+          height: 304.72px;
+          left: 103px;
+          top: 1807px;
+        }
+
+        .sal-title {
+          position: absolute;
+          width: 305px;
+          height: 60px;
+          left: 103px;
+          top: 2133px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 48px;
+          line-height: 72px;
+          text-align: center;
+        }
+
+        .sal-desc {
+          position: absolute;
+          width: 304.72px;
+          height: 152.36px;
+          left: 103px;
+          top: 2223.46px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 36px;
+
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        .sal-price {
+          position: absolute;
+          width: 94.8px;
+          height: 29.63px;
+          left: 103px;
+          top: 2489.69px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 27px;
+
+          color: #000000;
+          display: block;
+
+        }
+
+        .dc-price {
+          position: absolute;
+          width: 94.8px;
+          height: 29.63px;
+          left: 488.14px;
+          top: 2489.69px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 27px;
+
+          color: #000000;
+          display: block;
+
+        }
+
+        .dc{
+          display: block;
+        }
+
+        .la{
+          display: block;
+        }
+
+        .gal{
+          display: block;
+        }
+
+        .cai-price {
+          position: absolute;
+          width: 94.8px;
+          height: 29.63px;
+          left: 864.81px;
+          top: 2488px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 27px;
+
+          color: #000000;
+          display: block;
+
+        }
+
+        .gal-price {
+          position: absolute;
+          width: 94.8px;
+          height: 29.63px;
+          left: 101px;
+          top: 3174.77px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 27px;
+
+          color: #000000;
+          display: block;
+
+        }
+
+        .la-price {
+          position: absolute;
+          width: 94.8px;
+          height: 29.63px;
+          left: 486.14px;
+          top: 3169.69px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 27px;
+
+          color: #000000;
+          display: block;
+
+        }
+
+        .bali-price {
+          position: absolute;
+          width: 94.8px;
+          height: 29.63px;
+          left: 862.81px;
+          top: 3168px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 27px;
+
+          color: #000000;
+          display: block;
+
+        }
+
+        .dc-img {
+          position: absolute;
+          width: 303.03px;
+          height: 304.72px;
+          left: 488.14px;
+          top: 1807px;
+        }
+
+        .dc-title {
+          position: absolute;
+          width: 387px;
+          height: 60px;
+          left: 447px;
+          top: 2133px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 48px;
+          line-height: 72px;
+
+          color: #000000;
+        }
+
+        .dc-desc {
+          position: absolute;
+          width: 304.72px;
+          height: 152.36px;
+          left: 488.14px;
+          top: 2223.46px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 36px;
+
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        .gal-img {
+          position: absolute;
+          width: 304.72px;
+          height: 303.88px;
+          left: 103px;
+          top: 2582.85px;
+        }
+
+        .cai-title {
+          position: absolute;
+          width: 295px;
+          height: 60px;
+          left: 873px;
+          top: 2133px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 48px;
+          line-height: 72px;
+          text-align: center;
+        }
+
+        .gal-desc {
+          position: absolute;
+          width: 304.72px;
+          height: 152.36px;
+          left: 95px;
+          top: 2980.18px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 36px;
+
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        .cai-img {
+          position: absolute;
+          width: 303.03px;
+          height: 304.72px;
+          left: 864.81px;
+          top: 1807px;
+        }
+
+        .gal-title {
+          position: absolute;
+          width: 304.72px;
+          height: 59.25px;
+          left: 95px;
+          top: 2904px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 48px;
+          line-height: 72px;
+          text-align: center;
+
+          color: #000000;
+        }
+
+        .cai-desc {
+          position: absolute;
+          width: 304.72px;
+          height: 152.36px;
+          left: 873.28px;
+          top: 2223.46px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 36px;
+
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        .la-img {
+          position: absolute;
+          width: 304.72px;
+          height: 303.88px;
+          left: 488.14px;
+          top: 2582.85px;
+        }
+
+        .la-title {
+          position: absolute;
+          width: 304.72px;
+          height: 59.25px;
+          left: 480.14px;
+          top: 2904px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 48px;
+          line-height: 72px;
+          text-align: center;
+
+          color: #000000;
+        }
+
+        .la-desc {
+          position: absolute;
+          width: 304.72px;
+          height: 152.36px;
+          left: 480.14px;
+          top: 2980.18px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 36px;
+
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        .bali-img {
+          position: absolute;
+          width: 304.72px;
+          height: 304.72px;
+          left: 864.81px;
+          top: 2582px;
+        }
+
+        .bali-title {
+          position: absolute;
+          width: 304.72px;
+          height: 59.25px;
+          left: 865.28px;
+          top: 2904px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 48px;
+          line-height: 72px;
+          text-align: center;
+
+          color: #000000;
+        }
+
+        .bali-desc {
+          position: absolute;
+          width: 304.72px;
+          height: 152.36px;
+          left: 865.28px;
+          top: 2980.18px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 36px;
+
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        .more-btn {
+          position: absolute;
+          width: 42.32px;
+          height: 42.32px;
+          left: 619px;
+          top: 3298px;
+
+          background: #ffffff;
+          border: 2px solid rgba(0, 0, 0, 0.3);
+          border-radius: 200px;
+        }
+
+        .more {
+          position: absolute;
+          width: 63.48px;
+          height: 16.93px;
+          left: 608px;
+          top: 3347.94px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 36px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+
+          color: #000000;
+        }
+
+        .fourth-img {
+          position: absolute;
+          width: 1440px;
+          height: 687px;
+          left: 0px;
+          top: 3420px;
+        }
+
+        .test-slogan {
+          position: absolute;
+          width: 191px;
+          height: 26px;
+          left: 545px;
+          top: 3459px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 36px;
+
+          color: #ffffff;
+        }
+
+        .test-title {
+          position: absolute;
+          width: 230px;
+          height: 44px;
+          left: 525px;
+          top: 3569px;
+
+          font-family: raleway;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 36px;
+          line-height: 54px;
+          text-align: center;
+
+          color: #ffffff;
+        }
+
+        .test-desc {
+          position: absolute;
+          width: 1080px;
+          height: 180px;
+          left: 100px;
+          top: 3674px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 36px;
+          line-height: 54px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+
+          color: #ffffff;
+        }
+
+        .test-name {
+          position: absolute;
+          width: 220px;
+          height: 41px;
+          left: 530px;
+          top: 3938px;
+
+          font-family: Poppins;
+          font-style: italic;
+          font-weight: 500;
+          font-size: 36px;
+          line-height: 54px;
+          display: flex;
+          align-items: flex-end;
+          text-align: center;
+
+          color: #FFFFFF;
+        }
+
+        .profession {
+          position: relative;
+          top: 5px;
+          left: 10px;
+          font-size: 20px;
+        }
+
+        .news {
+          display: block;
+        }
+
+        .news1-img {
+          position: absolute;
+          width: 399px;
+          height: 250px;
+          left: 181px;
+          top: 4342px;
+        }
+
+        .news1-date,
+        .news1-month {
+          position: absolute;
+          width: 132px;
+          height: 56px;
+          left: 613px;
+          top: 4342px;
+        }
+
+        .news1-date {
+          font-family: Poppins;
+          font-style: italic;
+          font-weight: 200;
+          font-size: 48px;
+          line-height: 72px;
+
+          color: #000000;
+        }
+
+        .news1-month {
+          margin-top: 30px;
+          margin-left: 75px;
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 27px;
+
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        .news1-title {
+          position: absolute;
+          width: 187px;
+          height: 48px;
+          left: 613px;
+          top: 4419px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 36px;
+          line-height: 54px;
+
+          color: #000000;
+        }
+
+        .news1-desc {
+          position: absolute;
+          width: 454px;
+          height: 57px;
+          left: 613px;
+          top: 4498px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 27px;
+
+          color: #000000;
+        }
+
+        .news2-img {
+          position: absolute;
+          width: 396px;
+          height: 251px;
+          left: 181px;
+          top: 4703px;
+        }
+
+        .news2-date,
+        .news2-month {
+          position: absolute;
+          width: 132px;
+          height: 56px;
+          left: 613px;
+          top: 4702px;
+        }
+
+        .news2-date {
+          font-family: Poppins;
+          font-style: italic;
+          font-weight: 200;
+          font-size: 48px;
+          line-height: 72px;
+
+          color: #000000;
+        }
+
+        .news2-month {
+          margin-top: 30px;
+          margin-left: 75px;
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 27px;
+
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        .news2-title {
+          position: absolute;
+          width: 187px;
+          height: 48px;
+          left: 613px;
+          top: 4779px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 36px;
+          line-height: 54px;
+
+          color: #000000;
+        }
+
+        .news2-desc {
+          position: absolute;
+          width: 454px;
+          height: 57px;
+          left: 613px;
+          top: 4858px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 27px;
+
+          color: #000000;
+        }
+
+        .news3-img {
+          position: absolute;
+          width: 400px;
+          height: 250px;
+          left: 180px;
+          top: 5062px;
+        }
+
+        .news3-date,
+        .news3-month {
+          position: absolute;
+          width: 132px;
+          height: 56px;
+          left: 613px;
+          top: 5062px;
+
+          font-family: Poppins;
+          font-style: italic;
+          font-weight: 200;
+          font-size: 48px;
+          line-height: 72px;
+
+          color: #000000;
+        }
+
+        .news3-date {
+          font-family: Poppins;
+          font-style: italic;
+          font-weight: 200;
+          font-size: 48px;
+          line-height: 72px;
+
+          color: #000000;
+        }
+
+        .news3-month {
+          margin-top: 30px;
+          margin-left: 75px;
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 27px;
+
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        .news3-title {
+          position: absolute;
+          width: 187px;
+          height: 48px;
+          left: 613px;
+          top: 5139px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 36px;
+          line-height: 54px;
+
+          color: #000000;
+        }
+
+        .news3-desc {
+          position: absolute;
+          width: 454px;
+          height: 57px;
+          left: 613px;
+          top: 5218px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 27px;
+
+          color: #000000;
+        }
+
+        .fifth-img {
+          position: absolute;
+          width: 1440px;
+          height: 732px;
+          left: 0px;
+          top: 5434px;
+        }
+
+        .newsletter-text {
+          position: absolute;
+          width: 1100px;
+          height: 37px;
+          left: 112px;
+          top: 5559px;
+
+          font-family: raleway;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 36px;
+          line-height: 54px;
+          text-align: center;
+
+          color: #FFFFFF;
+
+        }
+
+        #id_full_name {
+          position: absolute;
+          width: 360px;
+          height: 90px;
+          left: 132px;
+          top: 5800px;  
+
+          background: rgba(255, 255, 255, 0.4);
+          border: 1px solid #000000;
+          box-sizing: border-box;
+          border: none;
+
+          background: rgba(255, 255, 255, 0.4);
+          padding-left: 20px;
+          
+          font-size: 18px;
+          color: #ffffff;
+          font-weight: 100;
+        }
+
+        #id_e_mail {
+          position: absolute;
+          width: 360px;
+          height: 90px;
+          left: 552px;
+          top: 5800px;
+
+          border: none;
+
+          background: rgba(255, 255, 255, 0.4);
+          padding-left: 20px;
+          
+          font-size: 18px;
+          color: #ffffff;
+          font-weight: 100;
+        }
+
+        #id_e_mail::placeholder,
+        #id_full_name::placeholder {
+          padding-left: 20px;
+          
+          font-size: 18px;
+          color: #ffffff;
+          font-weight: 100;
+          opacity: 0.7;
+        }
+
+        .btn {
+          position: absolute;
+          width: 120px;
+          height: 50px;
+          left: 971px;
+          top: 5820px;    
+          border: none;
+          border-radius: 30px;
+          background: rgba(255, 255, 255, 0.4);
+          font-size: 18px;
+          color: #ffffff;
+          cursor: pointer;
+        }
+
+        .offer {
+          cursor: pointer;
+        }
+
+        .testi {
+          cursor: pointer;
+        }
+
+        .latest {
+          cursor: pointer;
+        }
+
+        .quick-move {
+          text-decoration: none;
+          color: rgba(243, 243, 243, 0.55);
+        }
+
+        .value {
+          color: #000;
+          font-weight: 400;
+        }
+
+        .line-pointer{
+          position: absolute;
+          width: 60.01px;
+          height: 0px;
+          left: 432px;
+          top: 20px;
+
+          border: 2px solid #FFFFFF;
+          transform: rotate(89.05deg);
+        }
+      
+
+        
+    </style>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <div class="first-section">
+      <hr class="line-pointer">
+      <img
+        src="{% static 'home/rome_home.jpg' %}"
+        alt="Cover"
+        class="s1_cover"
+      />
+      <h1 class="title">Time To See The World</h1>
+
+      <img
+        src="{% static 'home/areoplane.png' %}"
+        alt="Plane"
+        class="plane"
+      />
+
+      <img
+        src="{% static 'home/bush.png' %}"
+        alt="Bush"
+        class="bush"
+      />
+
+      <div class="svgs">
+        <img src="https://image.flaticon.com/icons/svg/1737/1737382.svg" alt="Beach" class="beach" />
+        <p class="beach-text">
+          <i class="value">Top Destinations</i> <b class="extra-text"> Exotic, luxurious, Beutiful</div>
+        </p>
+
+        <img src="https://image.flaticon.com/icons/svg/584/584067.svg" alt="wallet" class="wallet" />
+        <p class="wallet-text">
+          <i class="value">The Best Prices</i> <b class="extra-text">No other place matches our prices</div>
+        </p>
+
+        <img src="https://image.flaticon.com/icons/svg/701/701360.svg" alt="case" class="case" />
+        <p class="case-text">
+          <i class="value">Amazing Services</i> <b class="extra-text">Quick refunds and amazing</div>
+          support
+        </p>
+
+        <hr class="upper-hr" />
+
+        <ul class="ul-context">
+          <li class="context offer">
+            <a href="#second" class="quick-move">Offers 01</a>
+          </li>
+          <li class="context testi">
+            <a href="" class="quick-move">Testimonials 02</a>
+          </li>
+          <li class="context latest">
+            <a href="" class="quick-move">Latest 03</a>
+          </li>
+        </ul>
+
+        <hr class="lower-hr" />
+      </div>
+    </div>
+
+    <div class="second-third-section" id="second">
+      <p class="s2-slogan">Discover Places</p>
+
+      <h2 class="location-header">Popular Destinations</h2>
+
+      <div class="salzburg">
+        <img
+          src="{% static 'home/salzburg.png' %}"
+          alt="Salzburg"
+          class="sal-img"
+        />
+
+        <h2 class="sal-title">Salzburg</h2>
+        <p class="sal-desc">
+          Celebrating 100 years of the Salzburg Festival, this Austrian city is
+          pulling out all the stops in 2020.
+        </p>
+        <p class="sal-price">From £679</p>
+      </div>
+
+      <div class="dc">
+        <img
+          src="{% static 'home/wash.jpg' %}"
+          alt="DC"
+          class="dc-img"
+        />
+
+        <h2 class="dc-title">Washington DC</h2>
+        <p class="dc-desc">
+          Iconic museums like the National Portrait Gallery, the National Museum
+          of American History and the National Museum of Women.
+        </p>
+        <p class="dc-price">From £679</p>
+      </div>
+
+      <div class="cairo">
+        <img
+          src="{% static 'home/cairo.jpg' %}"
+          alt="Cairo"
+          class="cai-img"
+        />
+
+        <h2 class="cai-title">Cairo</h2>
+        <p class="cai-desc">
+          Want to gawk at ancient Egypt’s wealth in the future? You’ll need to
+          visit Cairo’s Grand Egyptian Museum
+        </p>
+        <p class="cai-price">From £679</p>
+      </div>
+
+      <div class="gal">
+        <img
+          src="{% static 'home/gal.jpg' %}"
+          alt="Galway"
+          class="gal-img"
+        />
+
+        <h2 class="gal-title">Galway</h2>
+        <p class="gal-desc">
+          Vivid and vibrant, brimful of imagination, Galway in 2020 is home to a
+          year-long, city-wide, arty party
+        </p>
+        <p class="gal-price">From £679</p>
+      </div>
+
+      <div class="la">
+        <img
+          src="{% static 'home/paz.jpg' %}"
+          alt="La Paz"
+          class="la-img"
+        />
+
+        <h2 class="la-title">La Paz</h2>
+        <p class="la-desc">
+          Down below, the once-drab city is racing towards a more radiant and
+          inspired future
+        </p>
+        <p class="la-price">From £679</p>
+      </div>
+
+      <div class="bali">
+        <img
+          src="{% static 'home/bali.jpg' %}"
+          alt="Bali"
+          class="bali-img"
+        />
+
+        <h2 class="bali-title">Bali</h2>
+        <p class="bali-desc">
+          Filled with exotic island and a tranquil like atmosphere.
+        </p>
+        <p class="bali-price">From £679</p>
+      </div>
+      <button class="more-btn">-</button>
+      <p class="more">More</p>
+    </div>
+
+    <div class="fourth-section">
+      <img
+        src="{% static 'home/testimonial.jpg' %}"
+        alt="Testimonials"
+        class="fourth-img"
+      />
+
+      <p class="test-slogan">
+        Discover Places
+      </p>
+
+      <h1 class="test-title">Testimonials</h1>
+
+      <p class="test-desc">
+        turpis massa tincidunt dui ut ornare lectus sit amet est placerat in
+        egestas erat imperdiet
+      </p>
+
+      <p class="test-name">- Name, <small class="profession"> client</small></p>
+    </div>
+
+    <div class="fifth-section">
+      <img
+        src="{% static 'home/newsletter.jpg' %}"
+        alt="End"
+        class="fifth-img"
+      />
+
+      <p class="newsletter-text">
+        Subscribe To Our Newsletter To Get The Latest Trends & News
+      </p>
+
+      <div class="news">
+        <div class="news1">
+          <img
+            src="{% static 'home/news1.jpg' %}"
+            alt=""
+            class="news1-img"
+          />
+          <h2 class="news1-date">02</h2>
+          <p class="news1-month">June</p>
+
+          <h2 class="news1-title">Title</h2>
+
+          <p class="news1-desc">
+            volutpat consequat mauris nunc congue nisi vitae suscipit tellus
+            mauris
+          </p>
+        </div>
+
+        <div class="news2">
+          <img
+            src="{% static 'home/news2.jpg' %}"
+            alt=""
+            class="news2-img"
+          />
+          <h2 class="news2-date">01</h2>
+          <p class="news2-month">June</p>
+
+          <h2 class="news2-title">Title</h2>
+
+          <p class="news2-desc">
+            volutpat consequat mauris nunc congue nisi vitae suscipit tellus
+            mauris
+          </p>
+        </div>
+
+        <div class="news3">
+          <img
+            src="{% static 'home/news3.jpg' %}"
+            alt=""
+            class="news3-img"
+          />
+          <h2 class="news3-date">28</h2>
+          <p class="news3-month">May</p>
+
+          <h2 class="news3-title">Title</h2>
+
+          <p class="news3-desc">
+            volutpat consequat mauris nunc congue nisi vitae suscipit tellus
+            mauris
+          </p>
+        </div>
+      </div>
+
+      <form class="newsletter-form" method="POST">
+        <div class="newsletter">
+          {% csrf_token %} {{ form }}
+          <button type="submit" class="btn">Subscribe</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+       
+    </script>
+
+    {% endblock %}
+  </body>
+</html>

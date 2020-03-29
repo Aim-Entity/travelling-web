@@ -1,0 +1,1094 @@
+{% extends 'base.htm' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block head %}
+    <title>About-Us</title>
+    <style>
+      body{
+        height: 6144px;
+      }
+
+      .s1-img {
+        position: absolute;
+        width: 1280px;
+        height: 1024px;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+      }
+
+      .s2-slogan {
+        position: absolute;
+        width: 193px;
+        height: 26px;
+        left: 524px;
+        top: 1128px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .s2-title {
+        position: absolute;
+        width: 540px;
+        height: 67px;
+        left: 351px;
+        top: 1250px;
+
+        font-family: raleway;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 72px;
+
+        color: #000000;
+      }
+
+      .s2-main-body {
+        position: absolute;
+        width: 739px;
+        height: 234px;
+        left: 61px;
+        top: 1570px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 45px;
+
+        color: #000000;
+      }
+
+      .s2-secondary-body {
+        position: absolute;
+        width: 686px;
+        height: 180px;
+        left: 61px;
+        top: 1800px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 25px;
+
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .s2-img {
+        position: absolute;
+        width: 444px;
+        height: 514px;
+        left: 804px;
+        top: 1578px;
+
+        border-radius: 5px;
+      }
+
+      .s2-btn {
+        position: absolute;
+        width: 155.65px;
+        height: 60px;
+        left: 61px;
+        top: 2050px;
+        border: none;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+
+        color: #ffffff;
+
+        background: #000000;
+        border-radius: 20px;
+      }
+
+      .s3-country-img {
+        position: absolute;
+        width: 169px;
+        height: 163px;
+        left: 123px;
+        top: 2496px;
+      }
+
+      .s3-country-digit {
+        position: absolute;
+        width: 207.11px;
+        height: 113.52px;
+        left: 109.89px;
+        top: 2659px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 72px;
+        text-align: center;
+
+        color: #000000;
+      }
+
+      .s3-country-detail {
+        position: absolute;
+        width: 386px;
+        height: 22px;
+        left: 12px;
+        top: 2797.51px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .s3-cargo-img {
+        position: absolute;
+        width: 169px;
+        height: 163px;
+        left: 555px;
+        top: 2496px;
+      }
+
+      .s3-cargo-digit {
+        position: absolute;
+        width: 207.11px;
+        height: 113.52px;
+        left: 533px;
+        top: 2659px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 72px;
+        text-align: center;
+
+        color: #000000;
+      }
+
+      .s3-cargo-detail {
+        position: absolute;
+        width: 230px;
+        height: 22px;
+        left: 522px;
+        top: 2797.51px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .s3-plane-img {
+        position: absolute;
+        width: 169px;
+        height: 163px;
+        left: 987px;
+        top: 2496px;
+      }
+
+      .s3-plane-digit {
+        position: absolute;
+        width: 207.11px;
+        height: 113.52px;
+        left: 960.56px;
+        top: 2659px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 72px;
+        text-align: center;
+
+        color: #000000;
+      }
+
+      .s3-plane-detail {
+        position: absolute;
+        width: 230px;
+        height: 13px;
+        left: 949px;
+        top: 2802.51px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .s4-cover-img {
+        position: absolute;
+        width: 1280px;
+        height: 816.58px;
+        left: 0px;
+        top: 3206.85px;
+      }
+
+      .s4-services {
+        position: absolute;
+        width: 409px;
+        height: 500px;
+        left: 10px;
+        top: 3394px;
+        background: #fff;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+      }
+
+      .service-img {
+        position: absolute;
+        width: 409.89px;
+        height: 244.21px;
+
+        z-index: 2;
+      }
+
+      .service-detail {
+        align-self: center;
+        justify-self: center;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 54px;
+      }
+
+      .service-time {
+        position: absolute;
+        width: 97px;
+        height: 93px;
+        left: 154px;
+        top: 0px;
+        z-index: 5;
+      }
+
+      .service-round {
+        width: 300px;
+        height: 100px;
+        margin: 0 auto;
+        z-index: 4;
+        background-color: #fff;
+        border-radius: 0px 0px 200px 200px;
+        opacity: 0.5;
+      }
+
+      .s4-team {
+        position: absolute;
+        width: 408px;
+        height: 500px;
+        left: 430px;
+        top: 3394px;
+        background: #fff;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+      }
+
+      .team-img {
+        position: absolute;
+        width: 409.89px;
+        height: 244.21px;
+
+        z-index: 2;
+      }
+
+      .team-detail {
+        align-self: center;
+        justify-self: center;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 54px;
+      }
+
+      .team-time {
+        position: absolute;
+        width: 97px;
+        height: 93px;
+        left: 154px;
+        top: 0px;
+        z-index: 5;
+      }
+
+      .team-round {
+        width: 300px;
+        height: 100px;
+        margin: 0 auto;
+        z-index: 4;
+        background-color: #fff;
+        border-radius: 0px 0px 200px 200px;
+        opacity: 0.5;
+      }
+
+      .s4-deal {
+        position: absolute;
+        width: 404px;
+        height: 500px;
+        left: 850px;
+        top: 3394px;
+        background: #fff;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+      }
+
+      .deal-img {
+        position: absolute;
+        width: 406.22px;
+        height: 246.12px;
+        z-index: 2;
+      }
+
+      .deal-detail {
+        align-self: center;
+        justify-self: center;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 54px;
+      }
+
+      .deal-time {
+        position: absolute;
+        width: 97px;
+        height: 93px;
+        justify-self: center;
+        z-index: 5;
+      }
+
+      .deal-round {
+        width: 300px;
+        height: 100px;
+        margin: 0 auto;
+        z-index: 4;
+        background-color: #fff;
+        border-radius: 0px 0px 200px 200px;
+        display: grid;
+        opacity: 0.5;
+      }
+
+      .mar-img{
+        position: absolute;
+        width: 255px;
+        height: 255px;
+        left: 48.89px;
+        top: 4342.05px;
+
+        border-radius: 200px;
+      }
+
+      .mar-name{
+        position: absolute;
+        width: 238.22px;
+        height: 114.47px;
+        left: 54.22px;
+        top: 4625.37px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 54px;
+
+        text-align: center;
+
+        color: #000000;
+      }
+
+      .mar-desc{
+        position: absolute;
+        width: 288px;
+        height: 134px;
+        left: 33px;
+        top: 4672px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 36px;
+        text-align: center;
+        
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .will-img{
+        position: absolute;
+        width: 255px;
+        height: 255px;
+        left: 360px;
+        top: 4342.05px;
+        
+        border-radius: 200px;
+      }
+
+      .will-name{
+        position: absolute;
+        width: 274.67px;
+        height: 114.47px;
+        left: 346.67px;
+        top: 4625.37px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 54px;
+        text-align: center;
+        
+        color: #000000;
+        
+      }
+
+      .will-desc{
+        position: absolute;
+        width: 288px;
+        height: 211px;
+        left: 335px;
+        top: 4672px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 36px;
+        text-align: center;
+        
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .mic-img{
+        position: absolute;
+        width: 255px;
+        height: 255px;
+        left: 671.11px;
+        top: 4342.05px;
+        
+
+        border-radius: 200px;
+      }
+
+      .mic-name{
+        position: absolute;
+        width: 238.22px;
+        height: 114.47px;
+        left: 676.44px;
+        top: 4625.37px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 54px;
+
+        text-align: center;
+        
+        color: #000000;
+        
+      }
+
+      .mic-desc{
+        position: absolute;
+        width: 288px;
+        height: 140px;
+        left: 656px;
+        top: 4672px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 36px;
+        text-align: center;
+        
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .sid-img{
+        position: absolute;
+        width: 255px;
+        height: 255px;
+        left: 982.22px;
+        top: 4342.05px;
+        
+
+        border-radius: 200px;
+      }
+
+      .sid-name{
+        position: absolute;
+        width: 238.22px;
+        height: 114.47px;
+        left: 987.56px;
+        top: 4625.37px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 54px;
+        text-align: center;
+        
+        color: #000000;
+        
+      }
+
+      .sid-desc{
+        position: absolute;
+        width: 288px;
+        height: 254px;
+        left: 966px;
+        top: 4672px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .fifth-img {
+        position: absolute;
+        width: 1440px;
+        height: 732px;
+        left: 0px;
+        top: 5434px;
+      }
+
+      .newsletter-text {
+        position: absolute;
+        width: 1100px;
+        height: 37px;
+        left: 112px;
+        top: 5559px;
+
+        font-family: raleway;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 54px;
+        text-align: center;
+
+        color: #FFFFFF;
+
+      }
+
+      #id_full_name {
+        position: absolute;
+        width: 360px;
+        height: 90px;
+        left: 132px;
+        top: 5800px;  
+
+        background: rgba(255, 255, 255, 0.4);
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border: none;
+
+        background: rgba(255, 255, 255, 0.4);
+        padding-left: 20px;
+        
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 100;
+      }
+
+      #id_e_mail {
+        position: absolute;
+        width: 360px;
+        height: 90px;
+        left: 552px;
+        top: 5800px;
+
+        border: none;
+
+        background: rgba(255, 255, 255, 0.4);
+        padding-left: 20px;
+        
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 100;
+      }
+
+      #id_e_mail::placeholder,
+      #id_full_name::placeholder {
+        padding-left: 20px;
+        
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 100;
+        opacity: 0.7;
+      }
+
+      .btn {
+        position: absolute;
+        width: 120px;
+        height: 50px;
+        left: 971px;
+        top: 5820px;    
+        border: none;
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.4);
+        font-size: 18px;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      .fifth-img {
+        position: absolute;
+        width: 1440px;
+        height: 732px;
+        left: 0px;
+        top: 5434px;
+      }
+
+      .address-holder{
+        position: absolute;
+        width: 180px;
+        height: 60px;
+        left: 54px;
+        top: 5137px;
+        
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 20px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+      }
+
+      .address-detail{
+        position: absolute;
+        width: 110px;
+        height: 42px;
+        left: 139px;
+        top: 5208px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .phone-holder{
+        position: absolute;
+        width: 180px;
+        height: 60px;
+        left: 506px;
+        top: 5137px;
+        
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 20px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+      }
+
+      .phone-detail{
+        position: absolute;
+        width: 141px;
+        height: 36px;
+        left: 591px;
+        top: 5208px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        /* identical to box height */
+        
+        
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .email-holder{
+        position: absolute;
+        width: 180px;
+        height: 60px;
+        left: 966px;
+        top: 5137px;
+        
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 20px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+      }
+
+      .email-detail{
+        position: absolute;
+        width: 465px;
+        height: 42px;
+        left: 1051px;
+        top: 5208px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        
+        color: rgba(0, 0, 0, 0.6);
+        
+      }
+
+      .title{
+        position: absolute;
+        width: 814px;
+        height: 47px;
+        left: 233px;
+        top: 639px;
+
+
+        font-family: raleway;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 72px;
+        line-height: 108px;
+
+        text-align: center;
+
+        color: rgba(255, 255, 255, 0.8);
+
+      }
+
+      .ls4-title{
+        position: absolute;
+        width: 383px;
+        height: 112px;
+        left: 448px;
+        top: 4136px;
+        
+        font-family: raleway;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 72px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #000000;
+      }
+
+      .s4-slogan{
+      position: absolute;
+      width: 188px;
+      height: 25px;
+      left: 546px;
+      top: 4098px;
+
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 36px;
+
+      color: rgba(0, 0, 0, 0.6);
+      }
+
+      .pointer{
+        position: absolute;
+        width: 60.01px;
+        height: 0px;
+        left: 608.33px;
+        top: 20px;
+
+        border: 2px solid #FFFFFF;
+
+        transform: matrix(0.01, 1, -1, 0.02, 0, 0);
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <div class="container">
+      <div class="first-section">
+
+        <hr class="pointer">
+
+        <h1 class="title">
+          About Us
+        </h1>
+        <img
+          src="{% static 'imgs/about_main.jpg' %}"
+          alt="OilRig"
+          class="s1-img"
+        />
+      </div>
+
+      <div class="second-section">
+        <div class="s2-header">
+          <p class="s2-slogan">Discover Places</p>
+          <h2 class="s2-title">A Few Words About Us</h2>
+        </div>
+
+        <div class="s2-body">
+          <h3 class="s2-main-body">
+            suspendisse potenti nullam ac tortor vitae purus faucibus ornare
+            suspendisse sed nisi lacus sed viverra tellus in hac habitasse
+            platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper
+            dignissim
+          </h3>
+
+          <p class="s2-secondary-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel totam
+            fugiat laboriosam tempore. Odio at illo facilis doloribus ratione
+            beatae rem error commodi est exercitationem natus voluptates, libero
+            sint eveniet sunt. Eos magni rerum, tempore ut explicabo itaque
+            beatae aliquid, dolorum modi culpa expedita animi! Modi ipsam
+            perferendis perspiciatis aperiam, voluptate, maxime eveniet placeat
+            nulla aliquam laborum deleniti consequuntur iusto.
+          </p>
+
+          <img
+            src="{% static 'imgs/airport.jpg' %}"
+            alt="Airport"
+            class="s2-img"
+          />
+
+          <button class="s2-btn">Read More</button>
+        </div>
+
+        <div class="third-fouth-section">
+          <div class="third-section">
+            <div class="country">
+              <img
+                src="{% static 'imgs/country.svg' %}"
+                alt="Country"
+                class="s3-country-img"
+              />
+
+              <h1 class="s3-country-digit num">
+                20
+              </h1>
+
+              <h2 class="s3-country-detail">Countries Available</h2>
+            </div>
+
+            <div class="cargo">
+              <img
+                src="{% static 'imgs/cargo.svg' %}"
+                alt="Cargo"
+                class="s3-cargo-img"
+              />
+
+              <h1 class="s3-cargo-digit num">
+                25
+              </h1>
+
+              <h2 class="s3-cargo-detail">Cargo / Day</h2>
+            </div>
+
+            <div class="plane">
+              <img
+                src="{% static 'imgs/flights.svg' %}"
+                alt="Plane"
+                class="s3-plane-img"
+              />
+
+              <h1 class="s3-plane-digit num">
+                15
+              </h1>
+
+              <h2 class="s3-plane-detail">Flights / Day</h2>
+            </div>
+          </div>
+
+          <div class="fourth-section">
+            <img
+              src="{% static 'imgs/s4_cover.jpg' %}"
+              alt="Cover-Img"
+              class="s4-cover-img"
+            />
+
+            <div class="s4-services">
+              <div class="service-round">
+                <img
+                  src="{% static 'imgs/service.svg' %}"
+                  alt="Service"
+                  class="service-time"
+                />
+              </div>
+              <img
+                src="{% static 'imgs/s4_service.jpg' %}"
+                alt="Service-time"
+                class="service-img"
+              />
+
+              <h2 class="service-detail">Fast Services</h2>
+            </div>
+
+            <div class="s4-team">
+              <div class="team-round">
+                <img
+                  src="{% static 'imgs/team.svg' %}"
+                  alt="Team"
+                  class="team-time"
+                />
+              </div>
+              <img
+                src="{% static 'imgs/s4_time.jpg' %}"
+                alt="team-time"
+                class="team-img"
+              />
+
+              <h2 class="team-detail">Great Team</h2>
+            </div>
+
+            <div class="s4-deal">
+              <div class="deal-round">
+                <img
+                  src="{% static 'imgs/deals.svg' %}"
+                  alt="deal"
+                  class="deal-time"
+                />
+              </div>
+              <img
+                src="{% static 'imgs/s4_deal.jpg' %}"
+                alt="deal-time"
+                class="deal-img"
+              />
+
+              <h2 class="deal-detail">Best Deals</h2>
+          </div>
+
+          <div class="lower-s4">
+            <p class="s4-slogan">Discover Places</p>
+            <h2 class="ls4-title">Meet The Team</h2>
+
+            <div class="margret">
+              <img src="{% static 'imgs/face1.png' %}" alt="Staff" class="mar-img">
+
+              <h3 class="mar-name">Margret Smith</h3>
+
+              <p class="mar-desc">non sodales neque sodales ut etiam sit amet nisl purus in mollis nunc
+              </p>
+            </div>
+
+            <div class="will">
+              <img src="{% static 'imgs/face2.png' %}" alt="Staff" class="will-img">
+
+              <h3 class="will-name">William Borough</h3>
+
+              <p class="will-desc">semper risus in hendrerit gravida rutrum quisque non tellus orci ac auctor augue mauris augue neque gravida in
+              </p>
+            </div>
+
+            <div class="mic">
+              <img src="{% static 'imgs/face3.png' %}" alt="Staff" class="mic-img">
+
+              <h3 class="mic-name">Micheal Tyler</h3>
+
+              <p class="mic-desc">at imperdiet dui accumsan sit amet nulla facilisi morbi tempus iaculis
+              </p>
+            </div>
+
+            <div class="sid">
+              <img src="{% static 'imgs/face4.png' %}" alt="Staff" class="sid-img">
+
+              <h3 class="sid-name">Noah Sid</h3>
+
+              <p class="sid-desc">interdum varius sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut consequat sempe
+              </p>
+            </div>
+          </div>
+
+          <div class="fifth-section">
+            <div class="address">
+              <div class="address-holder">
+                <h3 class="address-text">Address</h3>
+              </div>
+
+              <p class="address-detail">Address</p>
+            </div>
+
+            <div class="phone">
+              <div class="phone-holder">
+                <h3 class="phone-text">Phone</h3>
+              </div>
+
+              <p class="phone-detail">Phone</p>
+            </div>
+
+            <div class="email">
+              <div class="email-holder">
+                <h3 class="email-text">Email</h3>
+              </div>
+
+              <p class="email-detail">Email</p>
+            </div>
+
+
+
+
+            <img
+              src="{% static 'home/newsletter.jpg' %}"
+              alt="End"
+              class="fifth-img"
+            />
+            <p class="newsletter-text">
+              Subscribe To Our Newsletter To Get The Latest Trends & News
+            </p>
+            <form class="newsletter-form" method="POST">
+              <div class="newsletter">
+                {% csrf_token %} {{ form }}
+                <button type="submit" class="btn">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".num").counterUp({delay: 10, time: 1000});
+
+    </script>
+    {% endblock %}
+  </body>
+</html>
